@@ -15,12 +15,12 @@ public class java {
 							"Entrez un nombre",
 							"Entrez un nombre version 2",
 							"Calcule la table de multiplication d'un entier",
-							"Calcule la somme des entiers pour arriver au nombre rentré par l'utilisateur",
+							"Calcule la somme des entiers pour arriver au nombre rentrÃ© par l'utilisateur",
 							"Calcule la factorielle d'un entier",
 							"Trouve le nombre le plus grand",
 							"Trouve le nombre le plus grand version 2",
-							"Calcule la monnaie à rendre selon les achats d'un client",
-							"Calcule le nombre de chances pour gagner au tiercé"
+							"Calcule la monnaie Ã  rendre selon les achats d'un client",
+							"Calcule le nombre de chances pour gagner au tiercÃ©"
 		};
 		
 		//tant que finish est false, la boucle tourne
@@ -32,12 +32,12 @@ public class java {
 				System.out.println("Menu Principal");
 				System.out.println("_______________");
 				System.out.println("\n");
-				// boucle qui affiche les exercices et leurs énoncés
+				// boucle qui affiche les exercices et leurs Ã©noncÃ©s
 				for(int i=0; i<11; i++) {
 					System.out.println((i+1) + " - Exercice " + (i+1) + " (" + enonces[i] + ")");
 				}
 				//l'utilisateur choisi l'exercice
-				System.out.println("Entrez le numéro correspondant à votre choix ou “0” pour quitter le programme:");
+				System.out.println("Entrez le numÃ©ro correspondant Ã  votre choix ou â€œ0â€ pour quitter le programme:");
 				saisieMenu = sc.nextInt();
 				afficherMenu = false;
 			}
@@ -46,7 +46,7 @@ public class java {
 				switch(saisieMenu) {
 					case 0:
 						System.out.println("Vous quittez le programme.");
-						//on donne la valeur true à finish pour quitter la boucle
+						//on donne la valeur true Ã  finish pour quitter la boucle
 						finish = true;
 						
 						break;
@@ -128,7 +128,7 @@ public class java {
 						int[] nombres = new int[20];
 						int index = 0;
 						for(int i=0; i < 20; i++) {
-							System.out.println("Entrez le nombre numéro " + (i + 1));
+							System.out.println("Entrez le nombre numÃ©ro " + (i + 1));
 							nombres[i] = sc.nextInt();
 							if(nombres[i]>nombres[index]) {
 									index = i;
@@ -162,19 +162,19 @@ public class java {
 						//lancer ex 10
 						int prixTotal = 0, billet10e = 0, billet5e = 0, piece1e = 0, reste = 0;
 						do {
-							System.out.println("Rentrez le prix de l'article, tapez 0 pour arrêter la saisie");
+							System.out.println("Rentrez le prix de l'article, tapez 0 pour arrÃªter la saisie");
 							saisie = sc.nextInt();
 							prixTotal = prixTotal + saisie;
 						} while(saisie != 0);
 						
 						//calcul du prix total
 						System.out.println("Le total est de " + prixTotal + " euros.");
-						System.out.println("Tapez le montant donné:");
+						System.out.println("Tapez le montant donnÃ©:");
 						int montantDonne = sc.nextInt();
 						//calcul du reste
 						reste = montantDonne - prixTotal;
 						System.out.println(reste);
-						//calcul de la monnaie à rendre
+						//calcul de la monnaie Ã  rendre
 						while(reste>=10) {
 							billet10e++;
 							reste = reste - 10;
@@ -189,7 +189,7 @@ public class java {
 						}
 						
 						//rendre la monnaie
-						System.out.println("Vous devez rendre " + billet10e + " billet(s) de 10 euros, " + billet5e + " billet(s) de 5 euros et " + piece1e + " pièce(s) de 1 euro.");
+						System.out.println("Vous devez rendre " + billet10e + " billet(s) de 10 euros, " + billet5e + " billet(s) de 5 euros et " + piece1e + " piÃ¨ce(s) de 1 euro.");
 	
 						break;
 					case 11:
@@ -199,7 +199,7 @@ public class java {
 						
 						System.out.println("Rentrez le nombre de chevaux partants:");
 						chevauxPartants = sc.nextInt();
-						System.out.println("Rentrez le nombre de chevaux joués");
+						System.out.println("Rentrez le nombre de chevaux jouÃ©s");
 						chevauxJoues = sc.nextInt();
 						
 						//calcul factorielle de chevauxPartants
@@ -216,20 +216,20 @@ public class java {
 						}
 
 						
-						//calcul du dénominateur de x
+						//calcul du dÃ©nominateur de x
 						denominateurx = 1;
 						for(int i=1; i<=(chevauxPartants - chevauxJoues); i++) {
 							denominateurx = denominateurx*i;
 						}
-						//calcul du dénominateur de y
+						//calcul du dÃ©nominateur de y
 						denominateury = factoriellecj*denominateurx;
 						System.out.println(denominateury);
 						System.out.println("Dans l'ordre, une chance sur " + factoriellecp/denominateurx + " de gagner!");
-						System.out.println("Dans le désordre, une chance sur " + factoriellecp/denominateury + " de gagner!");
+						System.out.println("Dans le dÃ©sordre, une chance sur " + factoriellecp/denominateury + " de gagner!");
 	
 						break;
 					default:
-						System.out.println("Vous n'avez pas rentré de valeur correspondante à un choix.");
+						System.out.println("Vous n'avez pas rentrÃ© de valeur correspondante Ã  un choix.");
 				
 				}
 			}
